@@ -1,5 +1,5 @@
 # Arduino-Foot-Controller
-#
+<br>
 #An arduino mega foot controller with 10 presets
 #his project may or may not swit your needings.
 #It does everything that many foot controllers do, but I have setup it to work with dpdt (permanent) switch.
