@@ -1,8 +1,8 @@
 # Arduino-Foot-Controller
 <br>
-#An arduino mega foot controller with 10 presets
-#his project may or may not swit your needings.
-#It does everything that many foot controllers do, but I have setup it to work with dpdt (permanent) switch.
+An arduino mega foot controller with 10 presets<br>
+his project may or may not swit your needings.<br>
+It does everything that many foot controllers do, but I have setup it to work with dpdt (permanent) switch.<br>
 #It also will have different actions on the LED's / button state depending on how  they were setup.
 #E.g.: If you have setup the buttons 1, 2, 3, 4 and 5 to send PC messages and 6, 7, 8, 9, 10, 11 and 12 to send CC's,
 #things will work somewhat like this:
