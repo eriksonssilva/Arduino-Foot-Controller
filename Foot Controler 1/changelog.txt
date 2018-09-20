@@ -1,0 +1,42 @@
+Version 0.0
+
+- Bug fixed: won't send any command when booting up.
+- Bug fixed: won't send a PC when the boot preset is > than 0
+
+Version 0.1
+- Optimization: declare "if (buttonState[i] != lastButtonState[i])" just once.
+
+Version 0.2
+
+- Optimization: The "Wire" library was removed, as it wasn't needed.
+
+- Cases were given a name.
+
+- The code was given the ability to save and retrieve some data to/from the EEPROM. It was actually implemented a while ago, but I forgot to mention.
+
+- Gave the tap-tempo midiCC an assignable variable so it wouldn't need to be updated everywhere in the code.
+
+Version 0.3
+
+- Optimization: void draw() created to allocate the drawings of the LCD display.
+
+- const long lcdTimer changed to long only, as the timer needed to change from one function to another:
+3 seconds for showing effects names and 5 seconds for showing song's names.
+
+Version 0.4
+
+- Optimization: The case "STATE_PC_Message" was rewriten in a smaller form, using "fors" to determine the footState, instead
+of determining each footState individually.
+In the code Kristian wrote, this solution was implemented, but a minor bug (not replacing the "i's" for "j's"), caused it not to work.
+Once I realized this, implementing this solution was really easy.
+
+- Optimization: The last part of the voit loop() was rewriten in a smaller form as well, working the same way as the "STATE_PC_Message".
+
+Version 0.5
+
+- Optimization: Cases were renamed - STATE was changed for FN, since they're functions , not states.
+- Optimization: Two cases were deleted: FN_Next_Song and FN_Previous_Song.
+Instead, the same button (case 5) will: 
+If condition = 0, show the current song.
+If contition = 1 and timer <= 1000 , the displayed song will be increased.
+If contition = 1 and timer >= 1000 , the displayed song will be decreased.
